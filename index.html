@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        /* Global Styling */
+        body {
+            background-color: #4B0082;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar Styling */
+        nav {
+            padding: 20px;
+            border-bottom: 2px solid white;
+        }
+
+        nav .image {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav h1 {
+            color: rgb(230, 213, 227);
+            margin: 0;
+        }
+
+        /* Main Content */
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+        }
+
+        .container div {
+            max-width: 50%;
+        }
+
+        .container h1 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .container p {
+            color: white;
+            line-height: 1.5;
+        }
+
+        .container button {
+            padding: 10px 20px;
+            background-color: #800080;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .container button a {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        .container img {
+            max-width: 200px;
+        }
+
+        /* Hover Effect */
+        button:hover {
+            background-color: #D8BFD8;
+            color: #4B0082;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;  /* Stack elements vertically on smaller screens */
+                text-align: center;      /* Center the text */
+            }
+
+            .container div {
+                max-width: 100%;
+            }
+
+            .container img {
+                max-width: 150px;  /* Smaller image for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container h1 {
+                font-size: 1.5rem;  /* Smaller font size for very small screens */
+            }
+
+            .container img {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="image">
+            <img src="./image.png" width="50px" height="50px" alt="Assistant Logo">
+            <h1>Virtual Assistant</h1>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div>
+            <h1>Hey,<br> I am Your Virtual Assistant</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi recusandae illo accusantium ipsam tenetur exercitationem architecto cumque sint dolor, nemo sit officia minima non quaerat iure temporibus! Expedita, fugit facere.</p>
+            <button>
+                <a href="./Open.html">Get Started</a>
+            </button>
+        </div>
+        <div>
+            <img src="./image.png" alt="Assistant">
+        </div>
+    </div>
+
+    <script>
+        const button = document.querySelector('button');
+        button.addEventListener('mouseover', () => {
+            button.style.backgroundColor = '#D8BFD8';
+            button.style.color = '#4B0082';
+        });
+        button.addEventListener('mouseout', () => {
+            button.style.backgroundColor = '#800080';
+            button.style.color = 'white';
+        });
+    </script>
+</body>
+</html>
